@@ -20,11 +20,14 @@ int left1=SensorValue(leftSensor);
 int right1=SensorValue(rightSensor);
 
 
+	//used to check if there are any white lines to either side of the robot
 if(SensorValue(leftSensor)>43 && SensorValue(rightSensor)>43){
 	motor[leftM]=speedL;
 	motor[rightM]=speedR;
 
 }
+	
+	//used to check if the robot can make a left when it encounters a black line leading to the left
 if(SensorValue(leftSensor)<43 && SensorValue(rightSensor)>43){
 int left1=SensorValue(leftSensor);
 int right1=SensorValue(rightSensor);
@@ -37,7 +40,7 @@ int right1=SensorValue(rightSensor);
 			right1=SensorValue(rightSensor);
 		}
 }
-
+//used to check if the robot can make a right when it encounters a black line leading to the right
 if(SensorValue(leftSensor)>43 && SensorValue(rightSensor)<43){
 
 	int left1=SensorValue(leftSensor);
